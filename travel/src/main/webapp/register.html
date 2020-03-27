@@ -99,7 +99,7 @@
 			$("#registerForm").submit(function() {
 				// 异步提交表单
 				if(checkUsername()) {
-					$.post("registServlet", $(this).serialize(), function(data) {
+					$.post("user/registUser", $(this).serialize(), function(data) {
 						if(true == data.flag) {
 							alert("注册成功！");
 							location.href="register_ok.html";

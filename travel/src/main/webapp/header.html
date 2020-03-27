@@ -3,7 +3,7 @@
 <script src="js/getParameter.js"></script>
 <script type="text/javascript">
 $(function() {
-	$.post("getCurrentServlet","",function(data) {
+	$.post("user/isLogin","",function(data) {
 		if(true == data.flag) {
 			$("#span_username").html(data.errorMsg);
 		}
@@ -49,7 +49,7 @@ $(function() {
             	
                 <span id="span_username"></span>
                 <a href="myfavorite.html" class="collection">我的收藏</a>
-                <a href="javascript:location.href='deleteServlet';">退出</a>
+                <a href="javascript:location.href='user/loginOut';">退出</a>
             </div>
         </div>
         <div class="header_wrap">
